@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>VR Labs - о нас</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topnav">
+        <div class="logo">
+            <img src="img/logo.png" alt="Логотип">
+            <span class="logo-text">VR Labs</span>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="location.href='index.html'">Главная</button>
+            <button onclick="location.href='about.html'">О нас</button>
+            <button onclick="location.href='contact.html'">Контакты</button>
+        </div>
+    </div>
+
+    <div class="main_about">
+        <h1>Создатели</h1>
+
+        <div class="about-card"><h2>Должность — имя — вклад</h2></div>
+        <div class="about-card"><h2>Должность — имя — вклад</h2></div>
+        <div class="about-card"><h2>Должность — имя — вклад</h2></div>
+        <div class="about-card"><h2>Должность — имя — вклад</h2></div>
+        <div class="about-card"><h2>Должность — имя — вклад</h2></div>
+        <div class="about-card"><h2>Должность — имя — вклад</h2></div>
+        <div class="about-card"><h2>Должность — имя — вклад</h2></div>
+
+
+        <div class="about-card" id="my-card">
+            <h2>Сайт написал: Шакимов Руслан</h2>
+        </div>
+    
+        <audio id="hover-sound" src="sounds/my_sound.mp3" preload="auto"></audio>
+    </div>    
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const specialCard = document.getElementById('my-card');
+            const hoverSound = document.getElementById('hover-sound');
+        
+
+            specialCard.addEventListener('mouseenter', () => {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+        });
+    </script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
